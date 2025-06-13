@@ -1,0 +1,40 @@
+{
+  "name": "plantopia-api",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/Plantopia-Capstone/plantopia-api#readme",
+  "bugs": {
+    "url": "https://github.com/Plantopia-Capstone/plantopia-api/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Plantopia-Capstone/plantopia-api.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node src/server.ts",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@clerk/backend": "^1.33.1",
+    "@hapi/hapi": "^21.4.0",
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^16.5.0",
+    "drizzle-orm": "^0.43.1",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.16.0",
+    "postgres": "^3.4.7",
+    "zod": "^3.25.46"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/node": "^22.15.22",
+    "drizzle-kit": "^0.31.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
