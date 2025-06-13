@@ -1,0 +1,18 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.env = void 0;
+const dotenv_1 = require("dotenv");
+(0, dotenv_1.config)({ path: '.env' });
+function requireEnv(name) {
+    const value = process.env[name];
+    if (!value) {
+        throw new Error(`Missing required environment variable: ${name}`);
+    }
+    return value;
+}
+exports.env = {
+    DATABASE_URL: requireEnv('DATABASE_URL'),
+    CLERK_SECRET_KEY: requireEnv('CLERK_SECRET_KEY'),
+    CLERK_JWT_KEY: requireEnv('CLERK_JWT_KEY'),
+    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: requireEnv('NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY'),
+};
